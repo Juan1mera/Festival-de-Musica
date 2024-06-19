@@ -1,0 +1,15 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.video{
+    position: relative;
+    .overlay{
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        background-color: v.$negro;
+        right: 0;
+        bottom: 0;
+    }
+
+}

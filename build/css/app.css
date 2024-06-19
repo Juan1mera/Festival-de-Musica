@@ -414,3 +414,15 @@ body > section {
 .navegacion-principal a:hover {
   color: #fdda00;
 }
+
+.video {
+  position: relative;
+}
+.video .overlay {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: #000000;
+  right: 0;
+  bottom: 0;
+}
