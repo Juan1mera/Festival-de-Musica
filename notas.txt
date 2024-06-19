@@ -1,0 +1,43 @@
+//Pasos de instalacion
+//inicia el npm
+npm init
+
+para instalar sass se usa
+npm i sass//i significa install
+
+npm i --D sass
+//Vuelve la dependencia una DevDependecies
+
+npm run sass
+//Inicia algo pero no se como explicarlo, Crea el archivo que este en scrips en el archivo package.json
+
+//No se deben hacer cambios en app.css
+//Todos los cambios deben ir en app.scss y usar el comando npm run sass para poder verlos
+
+
+//Usando --watch de la siguiente manera evitamos tener que usar el comando cada ves que queremos observar
+//Solo sedebe ejecutar npm init una ves mas para que se active
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css"
+  },
+
+
+//Para poder agregar gulp se usa el comando:
+npm i --save-dev gulp
+
+//Nosotros creamos el archio gulpfile.js para creear funciones
+
+//Ejemplo de una funcion:
+export function hola(done){//al usar export podemos usar esta funcion en otro archivo
+    console.log('Hola desde Gulfile.js')
+    done()//done se usa para avisar que la funcion ya acabo
+}
+
+//Para llamar esa funcion desde package.json se usa
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css",
+    "hola": "gulp hola"//Aqui es donde se pone gulp y el nombre de la funcion
+  }
+
+//Ahora para activarla se usa
+npm run hola
